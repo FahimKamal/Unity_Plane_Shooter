@@ -21,7 +21,12 @@ public class Player : MonoBehaviour
             Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
         }
 
-        transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * 10, Input.GetAxis("Vertical") * Time.deltaTime * 10, 0.0f);
-        
+        if(-1.5f < transform.position.x && transform.position.x < 1.5f && -4.1 < transform.position.y && transform.position.y < 3.1f)
+        {
+
+        }
+            transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * 10, Input.GetAxis("Vertical") * Time.deltaTime * 10, 0.0f);
+
+
     }
 }
