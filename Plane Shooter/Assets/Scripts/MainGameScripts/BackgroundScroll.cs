@@ -17,6 +17,8 @@ public class BackgroundScroll : MonoBehaviour
     {
         // var offset = MeshRenderer.material.mainTextureOffset;
         // offset = offset + new Vector2(0.00f, ScrollSpeed * Time.deltaTime);
+        // MeshRenderer.material.mainTextureOffset = offset;
+        
         MeshRenderer.material.mainTextureOffset += new Vector2(0.00f, ScrollSpeed * Time.deltaTime);
     }
 }
