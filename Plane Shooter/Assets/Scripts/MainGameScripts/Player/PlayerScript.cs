@@ -28,7 +28,7 @@ public class PlayerScript : MonoBehaviour
             _minX = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + padding;
             _maxX = mainCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding;
             _minY = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + padding;
-            _maxY = mainCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
+            _maxY = mainCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - (padding * 2.5f);
         }
     }
 
