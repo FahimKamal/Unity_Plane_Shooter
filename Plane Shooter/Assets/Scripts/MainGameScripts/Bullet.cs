@@ -10,6 +10,7 @@ enum moveDirection
 
 public class Bullet : MonoBehaviour
 {
+    public float damage = 1f;
     [SerializeField] private float speed = 15f;
     [SerializeField] private moveDirection direction;
 
