@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    [SerializeField] private float health = 10f;
+    [SerializeField] private float fullHealth = 10f;
+    private float _currentHealth = 10f;
     [SerializeField] private HealthBar healthBar;
     
     [SerializeField] private float movementSpeed = 10f;
@@ -13,7 +14,7 @@ public class EnemyScript : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        
+        _currentHealth = fullHealth;
     }
 
     // Update is called once per frame
@@ -25,9 +26,9 @@ public class EnemyScript : MonoBehaviour
     // When bullet hits enemy, enemy takes damage and health bar is updated.
     private void DamageHealthBar(float damage)
     {
-        if (!(health > 0)) return;
-        health -= damage;
-        healthBar.SetSize(health/ 10f);
+        if (!(_currentHealth > 0)) return;
+        _currentHealth -= damage;
+        healthBar.SetSize(_currentHealth/ fullHealth);
 
     }
 
@@ -37,7 +38,7 @@ public class EnemyScript : MonoBehaviour
         {
             DamageHealthBar(col.gameObject.GetComponent<Bullet>().damage);
             Destroy(col.gameObject);
-            if (health <= 0)
+            if (_currentHealth <= 0)
             {
                 var explosion = Instantiate(explosionSprite, transform.position, Quaternion.identity);
                 Destroy(gameObject);

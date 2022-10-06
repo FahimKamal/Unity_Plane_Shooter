@@ -360,10 +360,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_1
       objectReference: {fileID: 0}
-    - target: {fileID: 5337558834879079080, guid: 6fa8c27301e90a94eba3f249cfc1444b, type: 3}
-      propertyPath: shootRepeatTime
-      value: 0.8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fa8c27301e90a94eba3f249cfc1444b, type: 3}
 --- !u!1001 &4583669290073908568

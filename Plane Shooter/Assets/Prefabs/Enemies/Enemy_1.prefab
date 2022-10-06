@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 841822715372011239}
   - component: {fileID: 841822715372011238}
   - component: {fileID: 841822715372011241}
-  - component: {fileID: 7992805065550270167}
-  - component: {fileID: 5337558834879079080}
   - component: {fileID: 7156840088072799194}
   - component: {fileID: 4450413512325491093}
+  - component: {fileID: 7992805065550270167}
+  - component: {fileID: 5337558834879079080}
   m_Layer: 0
   m_Name: Enemy_1
   m_TagString: Untagged
@@ -114,40 +114,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7992805065550270167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841822715372011240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6924925f85c3604cb19a1809b86e272, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  healthBar: {fileID: 6527299456306990042}
-  movementSpeed: 3
-  explosionSprite: {fileID: 5561362445224167685, guid: c5e715fbe868e314b9eda41c1cae0443, type: 3}
---- !u!114 &5337558834879079080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841822715372011240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e29b41bbd8312041ada213f150108e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootRepeatTime: 0.7
-  bulletPrefab: {fileID: 134332444069798632, guid: 6bac7b8de74a97246b33222b55875cf6, type: 3}
-  spawnPoint1: {fileID: 3429107914399620540}
-  spawnPoint2: {fileID: 8770647471168221822}
-  muzzleFlash: {fileID: 2505959472912464172}
-  muzzleFlash2: {fileID: 2998004538124763886}
 --- !u!68 &7156840088072799194
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -196,6 +162,40 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7992805065550270167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841822715372011240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6924925f85c3604cb19a1809b86e272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 10
+  healthBar: {fileID: 6527299456306990042}
+  movementSpeed: 3
+  explosionSprite: {fileID: 5561362445224167685, guid: c5e715fbe868e314b9eda41c1cae0443, type: 3}
+--- !u!114 &5337558834879079080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841822715372011240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e29b41bbd8312041ada213f150108e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootRepeatTime: 0.8
+  bulletPrefab: {fileID: 134332444069798632, guid: 6bac7b8de74a97246b33222b55875cf6, type: 3}
+  spawnPoint1: {fileID: 3429107914399620540}
+  spawnPoint2: {fileID: 8770647471168221822}
+  muzzleFlash: {fileID: 2505959472912464172}
+  muzzleFlash2: {fileID: 2998004538124763886}
 --- !u!1 &2743610306337495723
 GameObject:
   m_ObjectHideFlags: 0
