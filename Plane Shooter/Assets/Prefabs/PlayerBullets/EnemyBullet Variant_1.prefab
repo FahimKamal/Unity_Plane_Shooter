@@ -7,9 +7,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 14243060284585077, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
+      propertyPath: m_Size.x
+      value: 0.22546859
+      objectReference: {fileID: 0}
+    - target: {fileID: 14243060284585077, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
+      propertyPath: m_Size.y
+      value: 0.56318736
+      objectReference: {fileID: 0}
+    - target: {fileID: 14243060284585077, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0034218952
+      objectReference: {fileID: 0}
+    - target: {fileID: 14243060284585077, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.011406243
+      objectReference: {fileID: 0}
+    - target: {fileID: 14243060284585077, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.164
+      objectReference: {fileID: 0}
+    - target: {fileID: 14243060284585077, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.496
+      objectReference: {fileID: 0}
     - target: {fileID: 346118028923406022, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: m_Name
       value: EnemyBullet Variant_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 346118028923406022, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 805785941126658683, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
+      propertyPath: speed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 805785941126658683, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: direction
