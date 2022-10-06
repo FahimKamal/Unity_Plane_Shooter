@@ -193,10 +193,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootRepeatTime: 0.8
   bulletPrefab: {fileID: 134332444069798632, guid: 6bac7b8de74a97246b33222b55875cf6, type: 3}
-  spawnPoint1: {fileID: 3429107914399620540}
-  spawnPoint2: {fileID: 8770647471168221822}
-  muzzleFlash: {fileID: 2505959472912464172}
-  muzzleFlash2: {fileID: 2998004538124763886}
+  spawnPoints:
+  - {fileID: 3429107914399620540}
+  - {fileID: 8770647471168221822}
+  muzzleFlashs:
+  - {fileID: 2505959472912464172}
+  - {fileID: 2998004538124763886}
 --- !u!1 &2743610306337495723
 GameObject:
   m_ObjectHideFlags: 0

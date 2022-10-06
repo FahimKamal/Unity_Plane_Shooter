@@ -9,31 +9,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 14243060284585077, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: m_Size.x
-      value: 0.06703566
+      value: 0.32100546
       objectReference: {fileID: 0}
     - target: {fileID: 14243060284585077, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: m_Size.y
-      value: 0.39720997
+      value: 0.27022505
       objectReference: {fileID: 0}
     - target: {fileID: 14243060284585077, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: m_Offset.x
-      value: -0.0028651264
+      value: 0.00023204088
       objectReference: {fileID: 0}
     - target: {fileID: 14243060284585077, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: m_Offset.y
-      value: -0.012484446
+      value: 0.00454998
       objectReference: {fileID: 0}
     - target: {fileID: 14243060284585077, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.164
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 14243060284585077, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.496
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 346118028923406022, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: m_Name
-      value: EnemyBullet Variant_1
+      value: EnemyBullet Variant_2
       objectReference: {fileID: 0}
     - target: {fileID: 346118028923406022, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: m_TagString
@@ -41,11 +41,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 805785941126658683, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: speed
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 805785941126658683, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: damage
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 805785941126658683, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: direction
@@ -54,7 +54,7 @@ PrefabInstance:
     - target: {fileID: 1736058042030977765, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1322335018, guid: 43ed3112fd092b048918493b16c31d38, type: 3}
+      objectReference: {fileID: 21300000, guid: a51042e748b48714fa50091cb5912acc, type: 3}
     - target: {fileID: 1736058042030977765, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -69,11 +69,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2091017034119221402, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.35
       objectReference: {fileID: 0}
     - target: {fileID: 2091017034119221402, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.23
       objectReference: {fileID: 0}
     - target: {fileID: 2091017034119221402, guid: 04cdd6186534584459ceb2a559528faf, type: 3}
       propertyPath: m_LocalPosition.z
