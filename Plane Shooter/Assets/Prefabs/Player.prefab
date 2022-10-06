@@ -161,11 +161,13 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.71043855, y: 0.24901152}
-  - {x: -0.1620462, y: 0.34107018}
-  - {x: 0.0068387985, y: 0.5945792}
-  - {x: 0.15404415, y: 0.33456993}
-  - {x: 0.7510937, y: 0.24901152}
+  - {x: -0.6911455, y: 0.20077896}
+  - {x: -0.15722299, y: 0.25425148}
+  - {x: -0.038127422, y: 0.37231016}
+  - {x: 0.016485214, y: 0.47399807}
+  - {x: 0.06636047, y: 0.36294222}
+  - {x: 0.16369069, y: 0.25739813}
+  - {x: 0.7510937, y: 0.18148613}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -205,6 +207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullHealth: 100
   healthBar: {fileID: 5200532533870012523}
+  healthBarUIScript: {fileID: 0}
+  damageEffect: {fileID: 6401631568001563700, guid: 7b148dbcfa346904c9b6f4e46a40e770, type: 3}
   particleBlast: {fileID: 1730338621821775202, guid: 5f4e9644323075a4aa1bfb891583bbea, type: 3}
   movementSpeed: 10
   padding: 0.8

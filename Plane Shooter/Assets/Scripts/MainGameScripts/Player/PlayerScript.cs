@@ -8,6 +8,7 @@ public class PlayerScript : MonoBehaviour
     private float _currentHealth;
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private PlayerHealthbarScript healthBarUIScript;
+    [SerializeField] private GameObject damageEffect;
     [SerializeField] private GameObject particleBlast;
     
     [SerializeField] private float movementSpeed = 10.0f;
@@ -58,6 +59,8 @@ public class PlayerScript : MonoBehaviour
         {
             DamageHealthBar(col.gameObject.GetComponent<Bullet>().damage);
             Destroy(col.gameObject);
+            var damageVfx = Instantiate(damageEffect, col.transform.position, Quaternion.identity);
+            Destroy(damageVfx, 0.05f);
             if (_currentHealth <= 0)
             {
                 var explosion = Instantiate(particleBlast, transform.position, Quaternion.identity);

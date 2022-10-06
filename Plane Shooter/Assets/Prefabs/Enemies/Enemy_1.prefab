@@ -177,6 +177,7 @@ MonoBehaviour:
   fullHealth: 10
   healthBar: {fileID: 6527299456306990042}
   movementSpeed: 3
+  damageEffect: {fileID: 6401631568001563700, guid: 7b148dbcfa346904c9b6f4e46a40e770, type: 3}
   explosionSprite: {fileID: 5561362445224167685, guid: c5e715fbe868e314b9eda41c1cae0443, type: 3}
 --- !u!114 &5337558834879079080
 MonoBehaviour:

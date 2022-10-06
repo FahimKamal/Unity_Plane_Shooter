@@ -9,7 +9,8 @@ public class EnemyScript : MonoBehaviour
     private float _currentHealth = 10f;
     [SerializeField] private HealthBar healthBar;
     
-    [SerializeField] private float movementSpeed = 10f;
+    [SerializeField] private float movementSpeed = 3f;
+    [SerializeField] private GameObject damageEffect;
     [SerializeField] private GameObject explosionSprite;
     // Start is called before the first frame update
     private void Start()
@@ -38,6 +39,8 @@ public class EnemyScript : MonoBehaviour
         {
             DamageHealthBar(col.gameObject.GetComponent<Bullet>().damage);
             Destroy(col.gameObject);
+            var damageVfx = Instantiate(damageEffect, col.transform.position, Quaternion.identity);
+            Destroy(damageVfx, 0.05f);
             if (_currentHealth <= 0)
             {
                 var explosion = Instantiate(explosionSprite, transform.position, Quaternion.identity);
