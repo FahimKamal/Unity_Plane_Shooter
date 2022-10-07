@@ -370,6 +370,7 @@ GameObject:
   - component: {fileID: 227096367}
   - component: {fileID: 227096369}
   - component: {fileID: 227096368}
+  - component: {fileID: 227096370}
   m_Layer: 5
   m_Name: CoinCount
   m_TagString: Untagged
@@ -497,6 +498,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227096366}
   m_CullTransparentMesh: 1
+--- !u!114 &227096370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227096366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0068a6b6b1256942979ee1eeff00445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinText: {fileID: 227096368}
 --- !u!1 &1021013027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,6 +1034,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2476704201524782418, guid: 02f5e7197bda18e41ba5b62eb332a0bb, type: 3}
+      propertyPath: coinCountUIScript
+      value: 
+      objectReference: {fileID: 227096370}
     - target: {fileID: 4583669291596190970, guid: 02f5e7197bda18e41ba5b62eb332a0bb, type: 3}
       propertyPath: m_Name
       value: Player

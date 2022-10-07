@@ -12,6 +12,9 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private float movementSpeed = 10.0f;
     [SerializeField] private float padding = 0.8f;
     
+    private int _coins = 0;
+    [SerializeField] CoinCount coinCountUIScript;
+    
     // Private variables to store the screen boundaries.
     private float _minX;
     private float _maxX;
@@ -72,7 +75,12 @@ public class PlayerScript : MonoBehaviour
 
         // Collect coins
         if (col.gameObject.CompareTag("Coin"))
+        {
             Destroy(col.gameObject);
+            _coins++;
+            coinCountUIScript.AddCoin(_coins);
+            
+        }
     }
 
     // Update is called once per frame
