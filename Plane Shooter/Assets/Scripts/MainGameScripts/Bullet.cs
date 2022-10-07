@@ -25,7 +25,6 @@ public class Bullet : MonoBehaviour
         {
             _yMax = Camera.main.ViewportToWorldPoint(new Vector2(0, 1)).y;
             _yMin = Camera.main.ViewportToWorldPoint(new Vector2(0, 0)).y;
-            
         }
 
         _directionVector = direction == moveDirection.Up ? Vector2.up : Vector2.down;
