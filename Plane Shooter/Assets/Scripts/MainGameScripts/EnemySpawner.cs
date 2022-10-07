@@ -14,12 +14,12 @@ public class EnemySpawner : MonoBehaviour
     
     private void SpawnEnemy()
     {
-        int enemyIndex = Random.Range(0, enemyPrefabs.Length);
-        int randomX = Random.Range(-2, 2);
+        var enemyIndex = Random.Range(0, enemyPrefabs.Length);
+        var randomX = Random.Range(-2, 2);
         Instantiate(enemyPrefabs[enemyIndex], new Vector2(randomX, transform.position.y), Quaternion.identity);
     }
-    
-    IEnumerator SpawnEnemyCoroutine()
+
+    private IEnumerator SpawnEnemyCoroutine()
     {
         while (true)
         {

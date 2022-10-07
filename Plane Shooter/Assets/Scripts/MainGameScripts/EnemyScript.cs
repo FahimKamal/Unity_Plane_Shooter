@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
@@ -12,6 +9,8 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] private float movementSpeed = 3f;
     [SerializeField] private GameObject damageEffect;
     [SerializeField] private GameObject explosionSprite;
+    
+    [SerializeField] private GameObject coinPrefab;
     // Start is called before the first frame update
     private void Start()
     {
@@ -43,10 +42,13 @@ public class EnemyScript : MonoBehaviour
             Destroy(damageVfx, 0.05f);
             if (_currentHealth <= 0)
             {
-                var explosion = Instantiate(explosionSprite, transform.position, Quaternion.identity);
+                var position = transform.position;
+                var explosion = Instantiate(explosionSprite, position, Quaternion.identity);
                 Destroy(gameObject);
                 Destroy(col.gameObject);
                 Destroy(explosion, 0.8f);
+                
+                Instantiate(coinPrefab, position, Quaternion.identity);
             }
         }
     }

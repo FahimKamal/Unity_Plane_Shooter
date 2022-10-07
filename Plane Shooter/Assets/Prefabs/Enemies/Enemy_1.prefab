@@ -179,6 +179,7 @@ MonoBehaviour:
   movementSpeed: 3
   damageEffect: {fileID: 6401631568001563700, guid: 7b148dbcfa346904c9b6f4e46a40e770, type: 3}
   explosionSprite: {fileID: 5561362445224167685, guid: c5e715fbe868e314b9eda41c1cae0443, type: 3}
+  coinPrefab: {fileID: 5075063586663931444, guid: 2632e348e2157c24da72d4eb52ac4940, type: 3}
 --- !u!114 &5337558834879079080
 MonoBehaviour:
   m_ObjectHideFlags: 0

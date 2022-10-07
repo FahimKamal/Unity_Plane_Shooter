@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -50,17 +48,19 @@ public class PlayerScript : MonoBehaviour
         _currentHealth -= damage;
         healthBar.SetSize(_currentHealth/ fullHealth);
         healthBarUIScript.SetHealth(_currentHealth / fullHealth);
-
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        // If Player collides with bullet, take damage.
         if (col.gameObject.CompareTag("EnemyBullet"))
         {
             DamageHealthBar(col.gameObject.GetComponent<Bullet>().damage);
             Destroy(col.gameObject);
             var damageVfx = Instantiate(damageEffect, col.transform.position, Quaternion.identity);
             Destroy(damageVfx, 0.05f);
+            
+            // If player health is 0, destroy player.
             if (_currentHealth <= 0)
             {
                 var explosion = Instantiate(particleBlast, transform.position, Quaternion.identity);
@@ -69,6 +69,10 @@ public class PlayerScript : MonoBehaviour
                 Destroy(explosion, 2f);
             }
         }
+
+        // Collect coins
+        if (col.gameObject.CompareTag("Coin"))
+            Destroy(col.gameObject);
     }
 
     // Update is called once per frame

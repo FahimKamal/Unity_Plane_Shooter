@@ -10,7 +10,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] private GameObject[] muzzleFlashs;
     
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         StartCoroutine(Shoot());
     }
@@ -22,8 +22,7 @@ public class Shooting : MonoBehaviour
         
         // Spawn muzzle flash
         foreach (var muzzleFlash in muzzleFlashs) muzzleFlash.SetActive(true);
-        
-        
+
         // Wait for a bit and then disable muzzle flash
         yield return new WaitForSeconds(0.09f);
         foreach (var muzzleFlash in muzzleFlashs) muzzleFlash.SetActive(false);
