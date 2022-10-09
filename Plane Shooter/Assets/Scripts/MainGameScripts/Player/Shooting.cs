@@ -8,10 +8,13 @@ public class Shooting : MonoBehaviour
     
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private GameObject[] muzzleFlashs;
-    
+    [SerializeField] private AudioManager audioManager;
+    private PlayerScript _playerScript;
+
     // Start is called before the first frame update
     private void Start()
     {
+        _playerScript = gameObject.GetComponent<PlayerScript>();
         StartCoroutine(Shoot());
     }
 
@@ -19,6 +22,11 @@ public class Shooting : MonoBehaviour
     {
         // Spawn bullet
         foreach (var spawnPoint in spawnPoints) Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
+
+        if (gameObject.CompareTag("Player"))
+        {
+            audioManager.PlaySound(audioManager.shootSound);
+        }
         
         // Spawn muzzle flash
         foreach (var muzzleFlash in muzzleFlashs) muzzleFlash.SetActive(true);

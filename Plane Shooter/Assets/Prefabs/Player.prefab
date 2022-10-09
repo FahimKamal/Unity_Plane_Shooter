@@ -210,8 +210,11 @@ MonoBehaviour:
   healthBarUIScript: {fileID: 0}
   damageEffect: {fileID: 6401631568001563700, guid: 7b148dbcfa346904c9b6f4e46a40e770, type: 3}
   particleBlast: {fileID: 1730338621821775202, guid: 5f4e9644323075a4aa1bfb891583bbea, type: 3}
+  gameController: {fileID: 0}
   movementSpeed: 10
   padding: 0.8
+  coinCountUIScript: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!114 &3856037682173207451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +235,7 @@ MonoBehaviour:
   muzzleFlashs:
   - {fileID: 5330699263631699124}
   - {fileID: 3461649731906330956}
+  audioManager: {fileID: 0}
 --- !u!1 &4771185335847626963
 GameObject:
   m_ObjectHideFlags: 0
