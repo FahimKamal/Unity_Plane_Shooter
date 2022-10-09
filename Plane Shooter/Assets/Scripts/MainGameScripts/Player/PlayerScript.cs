@@ -8,6 +8,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private PlayerHealthbarScript healthBarUIScript;
     [SerializeField] private GameObject damageEffect;
     [SerializeField] private GameObject particleBlast;
+    [SerializeField] private GameController gameController;
     
     [SerializeField] private float movementSpeed = 10.0f;
     [SerializeField] private float padding = 0.8f;
@@ -70,6 +71,7 @@ public class PlayerScript : MonoBehaviour
                 Destroy(gameObject);
                 Destroy(col.gameObject);
                 Destroy(explosion, 2f);
+                gameController.GameOver();
             }
         }
 
