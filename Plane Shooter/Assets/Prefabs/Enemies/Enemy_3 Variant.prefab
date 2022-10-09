@@ -135,6 +135,22 @@ PrefabInstance:
       propertyPath: m_Points.Array.data[6].y
       value: -0.083025455
       objectReference: {fileID: 0}
+    - target: {fileID: 7992805065550270167, guid: 6fa8c27301e90a94eba3f249cfc1444b, type: 3}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b28570efc8f49c4b8bc81eda8b8c539, type: 3}
+    - target: {fileID: 7992805065550270167, guid: 6fa8c27301e90a94eba3f249cfc1444b, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f4993e863dfff3d439531e7db48ba69c, type: 3}
+    - target: {fileID: 7992805065550270167, guid: 6fa8c27301e90a94eba3f249cfc1444b, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f604990084355ee47b8b4571208fa3ed, type: 3}
+    - target: {fileID: 7992805065550270167, guid: 6fa8c27301e90a94eba3f249cfc1444b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1833843658298029855}
     - target: {fileID: 8770647471168221822, guid: 6fa8c27301e90a94eba3f249cfc1444b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.801
@@ -145,3 +161,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fa8c27301e90a94eba3f249cfc1444b, type: 3}
+--- !u!82 &1833843658298029855 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -209067938931594338, guid: 6fa8c27301e90a94eba3f249cfc1444b, type: 3}
+  m_PrefabInstance: {fileID: 7235633986808831105}
+  m_PrefabAsset: {fileID: 0}

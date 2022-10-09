@@ -12,10 +12,15 @@ public class PlayerScript : MonoBehaviour
     
     [SerializeField] private float movementSpeed = 10.0f;
     [SerializeField] private float padding = 0.8f;
-   
+
+    [SerializeField] public AudioSource audioSource;
+    [SerializeField] private AudioClip deathSound;
+    [SerializeField] private AudioClip hitSound;
+    [SerializeField] public AudioClip shootSound;
+    [SerializeField] private AudioClip coinCollectSound;
+    
     private int _coins = 0;
     [SerializeField] CoinCount coinCountUIScript;
-    [SerializeField] private AudioManager audioManager;
     
     // Private variables to store the screen boundaries.
     private float _minX;
@@ -64,12 +69,12 @@ public class PlayerScript : MonoBehaviour
             Destroy(col.gameObject);
             var damageVfx = Instantiate(damageEffect, col.transform.position, Quaternion.identity);
             Destroy(damageVfx, 0.05f);
-            audioManager.PlaySound(audioManager.hitSound);
+            audioSource.PlayOneShot(hitSound, 0.5f);
             
             // If player health is 0, destroy player.
             if (_currentHealth <= 0)
             {
-                audioManager.PlaySound(audioManager.deathSound);
+                AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, 0.5f);
                 var explosion = Instantiate(particleBlast, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 Destroy(col.gameObject);
@@ -84,6 +89,7 @@ public class PlayerScript : MonoBehaviour
             Destroy(col.gameObject);
             _coins++;
             coinCountUIScript.AddCoin(_coins);
+            audioSource.PlayOneShot(coinCollectSound, 0.5f);
         }
     }
 

@@ -11,6 +11,11 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] private GameObject explosionSprite;
     
     [SerializeField] private GameObject coinPrefab;
+    
+    [SerializeField] public AudioSource audioSource;
+    [SerializeField] private AudioClip deathSound;
+    [SerializeField] private AudioClip hitSound;
+    [SerializeField] public AudioClip shootSound;
     // Start is called before the first frame update
     private void Start()
     {
@@ -36,12 +41,14 @@ public class EnemyScript : MonoBehaviour
     {
         if (col.gameObject.CompareTag("PlayerBullet"))
         {
+            audioSource.PlayOneShot(hitSound);
             DamageHealthBar(col.gameObject.GetComponent<Bullet>().damage);
             Destroy(col.gameObject);
             var damageVfx = Instantiate(damageEffect, col.transform.position, Quaternion.identity);
             Destroy(damageVfx, 0.05f);
             if (_currentHealth <= 0)
             {
+                AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, 0.5f);
                 var position = transform.position;
                 var explosion = Instantiate(explosionSprite, position, Quaternion.identity);
                 Destroy(gameObject);

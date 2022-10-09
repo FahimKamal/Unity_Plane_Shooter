@@ -2436,7 +2436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1462777298
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3810,10 +3810,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2476704201524782418, guid: 02f5e7197bda18e41ba5b62eb332a0bb, type: 3}
-      propertyPath: audioManager
-      value: 
-      objectReference: {fileID: 1473331336}
-    - target: {fileID: 2476704201524782418, guid: 02f5e7197bda18e41ba5b62eb332a0bb, type: 3}
       propertyPath: gameController
       value: 
       objectReference: {fileID: 701842434}
@@ -3821,10 +3817,6 @@ PrefabInstance:
       propertyPath: coinCountUIScript
       value: 
       objectReference: {fileID: 227096370}
-    - target: {fileID: 3856037682173207451, guid: 02f5e7197bda18e41ba5b62eb332a0bb, type: 3}
-      propertyPath: audioManager
-      value: 
-      objectReference: {fileID: 1473331336}
     - target: {fileID: 4583669291596190970, guid: 02f5e7197bda18e41ba5b62eb332a0bb, type: 3}
       propertyPath: m_Name
       value: Player
