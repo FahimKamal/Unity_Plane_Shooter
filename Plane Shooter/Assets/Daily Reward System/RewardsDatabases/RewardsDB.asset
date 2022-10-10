@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f75ce40fcaef7a743856d521a9efa30d, type: 3}
+  m_Name: RewardsDB
+  m_EditorClassIdentifier: 
+  rewards:
+  - type: 0
+    amount: 150
+  - type: 1
+    amount: 100
+  - type: 2
+    amount: 10
+  - type: 0
+    amount: 250
+  - type: 1
+    amount: 200
+  - type: 2
+    amount: 20
+  - type: 0
+    amount: 350
+  - type: 1
+    amount: 250
+  - type: 2
+    amount: 35
+  - type: 2
+    amount: 50
