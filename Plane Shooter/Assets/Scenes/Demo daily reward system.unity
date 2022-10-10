@@ -1269,7 +1269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &933864230
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1889,6 +1889,7 @@ MonoBehaviour:
   coinSprite: {fileID: 21300000, guid: 01ba8318450f014478c9b504f3f43da0, type: 3}
   gemSprite: {fileID: 21300000, guid: 00d42148c0a84c2448a14cde66521832, type: 3}
   rewardsDatabase: {fileID: 11400000, guid: f09e3b1b324571a488519e8f2683c991, type: 2}
+  nextRewardDelayTime: 20
 --- !u!1 &1136625728
 GameObject:
   m_ObjectHideFlags: 0
