@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Daily_Reward_System.Scripts;
 using TMPro;
 using UnityEngine;
@@ -43,19 +44,29 @@ namespace DailyRewardSystem
         [SerializeField] private Sprite coinSprite;
         [SerializeField] private Sprite gemSprite;
 
+        [Space] [Header("Reward Particle Effects")] 
+        [SerializeField] private ParticleSystem fxMetals;
+        [SerializeField] private ParticleSystem fxCoins;
+        [SerializeField] private ParticleSystem fxGems;
+        
+
         [Space] [Header("Rewards DataBase")] [SerializeField]
         private RewardsDatabase rewardsDatabase;
         
-        [SerializeField] private float nextRewardDelayTime = 20f;
+        [SerializeField] private float nextRewardDelayTime = 10f;
+        
+        // Check for rewards every 5 seconds.
+        [SerializeField] private float rewardCheckDelayTime = 5f;
 
         private int _nextRewardIndex;
+        private bool _isRewardAvailable;
 
         // Start is called before the first frame update
         private void Start()
         {
-            // PlayerPrefs.DeleteAll();
+            PlayerPrefs.DeleteAll();
             Initialize();
-            CheckForRewards();
+            StartCoroutine(CheckForRewards());
         }
 
         private void Initialize()
@@ -75,15 +86,46 @@ namespace DailyRewardSystem
 
             claimButton.onClick.RemoveAllListeners();
             claimButton.onClick.AddListener(OnClaimButtonClick);
+            
+            // Check if the game is opened for the first time, then set LastClaimTime to current time
+            if (!PlayerPrefs.HasKey("LastClaimTime"))
+            {
+                PlayerPrefs.SetString("LastClaimTime", DateTime.Now.ToString());
+            }
         }
-        
-        void CheckForRewards()
+
+
+        private IEnumerator CheckForRewards()
         {
-            ActiveReward();
+            while (true)
+            {
+                if (!_isRewardAvailable)
+                {
+                    var currentTime = DateTime.Now;
+                    var lastClaimTime = DateTime.Parse(PlayerPrefs.GetString("LastClaimTime"));
+            
+                    // Get total seconds between this 2 dates
+                    var totalSeconds = (currentTime - lastClaimTime).TotalSeconds;
+            
+                    // If the total seconds is greater than the next reward delay time, then activate the reward.
+                    if (totalSeconds >= nextRewardDelayTime)
+                    {
+                        ActiveReward();
+                    }
+                    else
+                    {
+                        DeactivateReward();
+                    }
+                }
+
+                yield return new WaitForSeconds(rewardCheckDelayTime);
+            }
         }
 
         void ActiveReward()
         {
+            _isRewardAvailable = true;
+            
             noMoreRewardsPanel.SetActive(false);
             rewardNotificationImage.SetActive(true);
             
@@ -105,6 +147,8 @@ namespace DailyRewardSystem
 
         private void DeactivateReward()
         {
+            _isRewardAvailable = false;
+            
             noMoreRewardsPanel.SetActive(true);
             rewardNotificationImage.SetActive(false);
         }
@@ -145,20 +189,20 @@ namespace DailyRewardSystem
             {
                 Debug.Log("<color=white>" + reward.type.ToString() + "Claimed : </color>+" + reward.amount);
                 GameData.Metals += reward.amount;
-                // todo: add FX
+                fxMetals.Play();
                 UpdateMetalTextUI();
             }
             else if (reward.type == RewardType.Coins)
             {
                 Debug.Log("<color=yellow>" + reward.type.ToString() + "Claimed : </color>+" + reward.amount);
                 GameData.Coins += reward.amount;
-                // todo: add FX
+                fxCoins.Play();
                 UpdateCoinTextUI();
             }
             else{ // RewardType.Type == RewardType.Gems
                 Debug.Log("<color=green>" + reward.type.ToString() + "Claimed : </color>+" + reward.amount);
                 GameData.Gems += reward.amount;
-                // todo: add FX
+                fxGems.Play();
                 UpdateGemsTextUI();
             }
             
@@ -169,6 +213,10 @@ namespace DailyRewardSystem
                 _nextRewardIndex = 0;
             }
             PlayerPrefs.SetInt("NextRewardIndex", _nextRewardIndex);
+            
+            // Save Datetime of the last claim click
+            var lastClaimTime = DateTime.Now;
+            PlayerPrefs.SetString("LastClaimTime", lastClaimTime.ToString());
             
             DeactivateReward();
         }

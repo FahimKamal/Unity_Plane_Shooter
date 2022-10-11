@@ -12,3 +12,4 @@ public class RewardsDatabase : ScriptableObject
     
     public Reward GetReward(int index) { return rewards[index]; }
 }
+ 
