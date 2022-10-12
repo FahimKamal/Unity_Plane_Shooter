@@ -18,26 +18,15 @@ public class RewardSetter : MonoBehaviour
 
     private void Start()
     {
-        if (gameData.loginCount == 0)
-        {
-            FirstLogin();
-        }
         
+    }
+
+    private void OnEnable()
+    {
         SetRewardPanels();
     }
 
-    private void FirstLogin()
-    {
-        var rewards = rewardDatabase.rewards;
-        for (var i = 0; i < rewards.Length; i++)
-        {
-            rewards[i].isLocked = true;
-            rewards[i].isClaimed = false;
-        }
-        rewards[0].isLocked = false;
-    }
-
-    private void SetRewardPanels()
+    public void SetRewardPanels()
     {
         var rewards = rewardDatabase.rewards;
         Sprite icon = null;

@@ -697,6 +697,10 @@ PrefabInstance:
       propertyPath: metalText
       value: 
       objectReference: {fileID: 394088157}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: notificationIcon
+      value: 
+      objectReference: {fileID: 630677870}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
 --- !u!224 &336724719 stripped
@@ -1161,6 +1165,10 @@ PrefabInstance:
       propertyPath: metalText
       value: 
       objectReference: {fileID: 394088157}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: notificationIcon
+      value: 
+      objectReference: {fileID: 630677870}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
 --- !u!224 &687448310 stripped
@@ -1922,7 +1930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1100942059
 Transform:
   m_ObjectHideFlags: 0
@@ -2047,6 +2055,10 @@ PrefabInstance:
       propertyPath: metalText
       value: 
       objectReference: {fileID: 394088157}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: notificationIcon
+      value: 
+      objectReference: {fileID: 630677870}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
 --- !u!224 &1102728960 stripped
@@ -2328,10 +2340,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3afdd9b8fc5ab2449092b20954359c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextRewardDelayTime: 5
   metalText: {fileID: 394088157}
   coinText: {fileID: 1038632000}
   gemText: {fileID: 566970890}
+  openRewardButton: {fileID: 1978838165}
+  closeRewardButton: {fileID: 281426035}
+  rewardPanel: {fileID: 1100942058}
+  rewardNotification: {fileID: 630677870}
+  rewardSetter: {fileID: 772620714}
   gameData: {fileID: 11400000, guid: 7b58504b25e55554a9f4c5562258ea2f, type: 2}
+  rewardDatabase: {fileID: 11400000, guid: 5e974e21086e47f4fafbf4a969a9d4ab, type: 2}
 --- !u!4 &1493085701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4166546489801070, guid: 10b4bce8c88e3f4499031ee16cbb1f37, type: 3}
@@ -2929,6 +2948,10 @@ PrefabInstance:
       propertyPath: metalText
       value: 
       objectReference: {fileID: 394088157}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: notificationIcon
+      value: 
+      objectReference: {fileID: 630677870}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
 --- !u!224 &1856679265 stripped
@@ -3428,6 +3451,10 @@ PrefabInstance:
       propertyPath: metalText
       value: 
       objectReference: {fileID: 394088157}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: notificationIcon
+      value: 
+      objectReference: {fileID: 630677870}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
 --- !u!224 &2046140726 stripped
@@ -3553,6 +3580,10 @@ PrefabInstance:
       propertyPath: metalText
       value: 
       objectReference: {fileID: 394088157}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: notificationIcon
+      value: 
+      objectReference: {fileID: 630677870}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
 --- !u!224 &2113194392 stripped
@@ -3678,6 +3709,10 @@ PrefabInstance:
       propertyPath: metalText
       value: 
       objectReference: {fileID: 394088157}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: notificationIcon
+      value: 
+      objectReference: {fileID: 630677870}
     - target: {fileID: 9070546073410746031, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_IsActive
       value: 0

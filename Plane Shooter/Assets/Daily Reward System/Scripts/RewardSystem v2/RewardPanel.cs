@@ -10,6 +10,7 @@ public class RewardPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI metalText;
     [SerializeField] private TextMeshProUGUI coinText;
     [SerializeField] private TextMeshProUGUI gemText;
+    [SerializeField] private GameObject notificationIcon;
     
     [Space] [Header("Reward Panel items")] [Space]
     [SerializeField] private Image icon;
@@ -65,13 +66,16 @@ public class RewardPanel : MonoBehaviour
         // Unlock next reward
         if (rewardIndex < rewardDatabase.rewards.Length - 1)
         {
-            rewardDatabase.rewards[rewardIndex + 1].isLocked = false;
             gameData.loginCount = rewardIndex + 1;
+            gameData.lastLoginDate = DateTime.Now.ToString();
         }
         else
         {
             gameData.loginCount = 0;
+            gameData.lastLoginDate = "";
         }
+        
+        notificationIcon.SetActive(false);
 
         collectedPanel.SetActive(true);
         collectButton.interactable = false;

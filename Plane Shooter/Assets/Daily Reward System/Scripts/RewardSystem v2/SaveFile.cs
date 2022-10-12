@@ -13,6 +13,8 @@ namespace RewardSystemV2
         public int totalMetals;
         public int totalCoins;
         public int totalGems;
+        
+        public string lastLoginDate;
     }
 }
 

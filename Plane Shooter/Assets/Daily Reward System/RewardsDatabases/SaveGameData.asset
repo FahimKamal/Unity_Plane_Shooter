@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 112e0a5fa48ba704e8798b4a21ae932c, type: 3}
   m_Name: SaveGameData
   m_EditorClassIdentifier: 
-  loginCount: 0
-  totalMetals: 0
-  totalCoins: 0
-  totalGems: 0
+  loginCount: 3
+  totalMetals: 1550
+  totalCoins: 600
+  totalGems: 70
+  lastLoginDate: 10/12/2022 6:05:17 PM
