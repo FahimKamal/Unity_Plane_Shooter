@@ -15,30 +15,30 @@ MonoBehaviour:
   rewardCount: 7
   rewards:
   - type: 0
-    amount: 0
-    isClaimed: 0
+    amount: 150
+    isClaimed: 1
     isLocked: 0
+  - type: 1
+    amount: 100
+    isClaimed: 0
+    isLocked: 1
+  - type: 2
+    amount: 10
+    isClaimed: 0
+    isLocked: 1
   - type: 0
-    amount: 0
+    amount: 200
     isClaimed: 0
-    isLocked: 0
+    isLocked: 1
+  - type: 1
+    amount: 150
+    isClaimed: 0
+    isLocked: 1
+  - type: 2
+    amount: 20
+    isClaimed: 0
+    isLocked: 1
   - type: 0
-    amount: 0
+    amount: 350
     isClaimed: 0
-    isLocked: 0
-  - type: 0
-    amount: 0
-    isClaimed: 0
-    isLocked: 0
-  - type: 0
-    amount: 0
-    isClaimed: 0
-    isLocked: 0
-  - type: 0
-    amount: 0
-    isClaimed: 0
-    isLocked: 0
-  - type: 0
-    amount: 0
-    isClaimed: 0
-    isLocked: 0
+    isLocked: 1

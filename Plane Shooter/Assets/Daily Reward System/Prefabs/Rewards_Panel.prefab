@@ -130,6 +130,10 @@ MonoBehaviour:
   amountText: {fileID: 6036829889827279140}
   lockedPanel: {fileID: 9070546073410746031}
   collectedPanel: {fileID: 7240586830815379360}
+  collectButton: {fileID: 6036829888730558089}
+  rewardDatabase: {fileID: 11400000, guid: 5e974e21086e47f4fafbf4a969a9d4ab, type: 2}
+  gameData: {fileID: 11400000, guid: 7b58504b25e55554a9f4c5562258ea2f, type: 2}
+  rewardIndex: 0
 --- !u!1 &6036829888730558131
 GameObject:
   m_ObjectHideFlags: 0

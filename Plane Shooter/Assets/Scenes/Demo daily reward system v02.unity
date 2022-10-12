@@ -245,7 +245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 14.600006, y: -40}
+  m_AnchoredPosition: {x: 14.599976, y: -40}
   m_SizeDelta: {x: 119.18, y: 36.24}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &187348645
@@ -301,6 +301,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187348643}
   m_CullTransparentMesh: 1
+--- !u!114 &212536527 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+  m_PrefabInstance: {fileID: 6036829889434060137}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9725ce91e4bfeaf4cac68cf3b78604e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &262791590
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,11 +392,6 @@ CanvasRenderer:
 --- !u!4 &266475941 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4701665169273488, guid: f48faa1725631d64987ae8060137c620, type: 3}
-  m_PrefabInstance: {fileID: 1083120090}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &266475943 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198551463337987226, guid: f48faa1725631d64987ae8060137c620, type: 3}
   m_PrefabInstance: {fileID: 1083120090}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &281426033
@@ -519,7 +525,6 @@ GameObject:
   m_Component:
   - component: {fileID: 310977838}
   - component: {fileID: 310977836}
-  - component: {fileID: 310977837}
   m_Layer: 0
   m_Name: UICamera
   m_TagString: Untagged
@@ -570,14 +575,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &310977837
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310977835}
-  m_Enabled: 1
 --- !u!4 &310977838
 Transform:
   m_ObjectHideFlags: 0
@@ -686,8 +683,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5089971112021970380, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_Name
-      value: Rewards_Panel (6)
+      value: Rewards_Panel_07
       objectReference: {fileID: 0}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: gemText
+      value: 
+      objectReference: {fileID: 566970890}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 1038632000}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: metalText
+      value: 
+      objectReference: {fileID: 394088157}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
 --- !u!224 &336724719 stripped
@@ -1062,7 +1071,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1138,8 +1147,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5089971112021970380, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_Name
-      value: Rewards_Panel (4)
+      value: Rewards_Panel_04
       objectReference: {fileID: 0}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: gemText
+      value: 
+      objectReference: {fileID: 566970890}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 1038632000}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: metalText
+      value: 
+      objectReference: {fileID: 394088157}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
 --- !u!224 &687448310 stripped
@@ -1147,28 +1168,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
   m_PrefabInstance: {fileID: 687448309}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &699405389 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6036829889827279140, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
-  m_PrefabInstance: {fileID: 6036829889434060137}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &754895511 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6036829889914687486, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
-  m_PrefabInstance: {fileID: 6036829889434060137}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &772620710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,6 +1179,7 @@ GameObject:
   - component: {fileID: 772620711}
   - component: {fileID: 772620713}
   - component: {fileID: 772620712}
+  - component: {fileID: 772620714}
   m_Layer: 5
   m_Name: Reward_Box_Panel
   m_TagString: Untagged
@@ -1202,12 +1202,12 @@ RectTransform:
   - {fileID: 1661840295}
   - {fileID: 972911727}
   - {fileID: 281426034}
-  - {fileID: 6036829889434060138}
   - {fileID: 1506314585}
+  - {fileID: 6036829889434060138}
   - {fileID: 1856679265}
   - {fileID: 2113194392}
-  - {fileID: 2046140726}
   - {fileID: 687448310}
+  - {fileID: 2046140726}
   - {fileID: 1102728960}
   - {fileID: 336724719}
   m_Father: {fileID: 262791591}
@@ -1215,7 +1215,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.39929444, y: 0}
   m_AnchorMax: {x: 0.597, y: 1}
-  m_AnchoredPosition: {x: 2, y: -8.841797}
+  m_AnchoredPosition: {x: 2, y: -8.841553}
   m_SizeDelta: {x: 795.26196, y: -1177.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &772620712
@@ -1256,6 +1256,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772620710}
   m_CullTransparentMesh: 1
+--- !u!114 &772620714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772620710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89653170c24c5f74487f142952f98820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameData: {fileID: 11400000, guid: 7b58504b25e55554a9f4c5562258ea2f, type: 2}
+  rewardDatabase: {fileID: 11400000, guid: 5e974e21086e47f4fafbf4a969a9d4ab, type: 2}
+  rewardPanels:
+  - {fileID: 212536527}
+  - {fileID: 1856679266}
+  - {fileID: 2113194393}
+  - {fileID: 941828798}
+  - {fileID: 2046140727}
+  - {fileID: 1102728961}
+  - {fileID: 1916237965}
+  metalIcon: {fileID: 21300022, guid: 90a32486084ff5b448a426d6df901774, type: 3}
+  coinIcon: {fileID: 21300020, guid: 90a32486084ff5b448a426d6df901774, type: 3}
+  gemIcon: {fileID: 21300018, guid: 90a32486084ff5b448a426d6df901774, type: 3}
 --- !u!1 &780978618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,11 +1378,6 @@ CanvasRenderer:
 --- !u!4 &932941900 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4603593404386480, guid: 8d669beb3609811419654e7d89da4c55, type: 3}
-  m_PrefabInstance: {fileID: 1819144342}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &932941902 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198818429960264178, guid: 8d669beb3609811419654e7d89da4c55, type: 3}
   m_PrefabInstance: {fileID: 1819144342}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &933864229
@@ -1461,6 +1481,17 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 50
   m_TargetDisplay: 0
+--- !u!114 &941828798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+  m_PrefabInstance: {fileID: 687448309}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9725ce91e4bfeaf4cac68cf3b78604e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &972911726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1885,7 +1916,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1100942059}
-  - component: {fileID: 1100942060}
   m_Layer: 0
   m_Name: Daily_Rewards_UI
   m_TagString: Untagged
@@ -1910,38 +1940,6 @@ Transform:
   m_Father: {fileID: 1060958170}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1100942060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100942058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b685cdc8610c61642bb3e2c9c6a23b3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  metalsText: {fileID: 394088157}
-  coinText: {fileID: 1038632000}
-  gemsText: {fileID: 566970890}
-  rewardCanvas: {fileID: 933864229}
-  openButton: {fileID: 1978838165}
-  closeButton: {fileID: 281426035}
-  rewardImage: {fileID: 754895511}
-  rewardAmountText: {fileID: 699405389}
-  claimButton: {fileID: 0}
-  rewardNotificationImage: {fileID: 630677870}
-  noMoreRewardsPanel: {fileID: 1506314584}
-  metalSprite: {fileID: 21300000, guid: a44c29cc077709e4ca5fa297c8b228bb, type: 3}
-  coinSprite: {fileID: 21300000, guid: 01ba8318450f014478c9b504f3f43da0, type: 3}
-  gemSprite: {fileID: 21300000, guid: 00d42148c0a84c2448a14cde66521832, type: 3}
-  fxMetals: {fileID: 932941902}
-  fxCoins: {fileID: 266475943}
-  fxGems: {fileID: 1493085703}
-  rewardsDatabase: {fileID: 11400000, guid: f09e3b1b324571a488519e8f2683c991, type: 2}
-  nextRewardDelayTime: 10
-  rewardCheckDelayTime: 5
 --- !u!1001 &1102728959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2035,8 +2033,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5089971112021970380, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_Name
-      value: Rewards_Panel (5)
+      value: Rewards_Panel_06
       objectReference: {fileID: 0}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: gemText
+      value: 
+      objectReference: {fileID: 566970890}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 1038632000}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: metalText
+      value: 
+      objectReference: {fileID: 394088157}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
 --- !u!224 &1102728960 stripped
@@ -2044,6 +2054,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
   m_PrefabInstance: {fileID: 1102728959}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1102728961 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+  m_PrefabInstance: {fileID: 1102728959}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9725ce91e4bfeaf4cac68cf3b78604e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1136625728
 GameObject:
   m_ObjectHideFlags: 0
@@ -2271,6 +2292,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1460818885}
+  - component: {fileID: 1460818886}
   m_Layer: 0
   m_Name: Main_Menu_UI
   m_TagString: Untagged
@@ -2294,14 +2316,25 @@ Transform:
   m_Father: {fileID: 1060958170}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1460818886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460818884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3afdd9b8fc5ab2449092b20954359c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  metalText: {fileID: 394088157}
+  coinText: {fileID: 1038632000}
+  gemText: {fileID: 566970890}
+  gameData: {fileID: 11400000, guid: 7b58504b25e55554a9f4c5562258ea2f, type: 2}
 --- !u!4 &1493085701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4166546489801070, guid: 10b4bce8c88e3f4499031ee16cbb1f37, type: 3}
-  m_PrefabInstance: {fileID: 1525790536}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1493085703 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198057594858985612, guid: 10b4bce8c88e3f4499031ee16cbb1f37, type: 3}
   m_PrefabInstance: {fileID: 1525790536}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1506314584
@@ -2336,7 +2369,7 @@ RectTransform:
   m_Children:
   - {fileID: 2011180721}
   m_Father: {fileID: 772620711}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2882,8 +2915,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5089971112021970380, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_Name
-      value: Rewards_Panel (1)
+      value: Rewards_Panel_02
       objectReference: {fileID: 0}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: gemText
+      value: 
+      objectReference: {fileID: 566970890}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 1038632000}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: metalText
+      value: 
+      objectReference: {fileID: 394088157}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
 --- !u!224 &1856679265 stripped
@@ -2891,6 +2936,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
   m_PrefabInstance: {fileID: 1856679264}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1856679266 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+  m_PrefabInstance: {fileID: 1856679264}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9725ce91e4bfeaf4cac68cf3b78604e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1859736972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2995,6 +3051,17 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 100
   m_TargetDisplay: 0
+--- !u!114 &1916237965 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+  m_PrefabInstance: {fileID: 336724718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9725ce91e4bfeaf4cac68cf3b78604e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1978838163
 GameObject:
   m_ObjectHideFlags: 0
@@ -3271,7 +3338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3347,8 +3414,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5089971112021970380, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_Name
-      value: Rewards_Panel (3)
+      value: Rewards_Panel_05
       objectReference: {fileID: 0}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: gemText
+      value: 
+      objectReference: {fileID: 566970890}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 1038632000}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: metalText
+      value: 
+      objectReference: {fileID: 394088157}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
 --- !u!224 &2046140726 stripped
@@ -3356,6 +3435,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
   m_PrefabInstance: {fileID: 2046140725}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2046140727 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+  m_PrefabInstance: {fileID: 2046140725}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9725ce91e4bfeaf4cac68cf3b78604e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2113194391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3449,8 +3539,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5089971112021970380, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_Name
-      value: Rewards_Panel (2)
+      value: Rewards_Panel_03
       objectReference: {fileID: 0}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: gemText
+      value: 
+      objectReference: {fileID: 566970890}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 1038632000}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: metalText
+      value: 
+      objectReference: {fileID: 394088157}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
 --- !u!224 &2113194392 stripped
@@ -3458,6 +3560,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
   m_PrefabInstance: {fileID: 2113194391}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2113194393 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+  m_PrefabInstance: {fileID: 2113194391}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9725ce91e4bfeaf4cac68cf3b78604e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6036829889434060137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3475,7 +3588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3551,7 +3664,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5089971112021970380, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_Name
-      value: Rewards_Panel
+      value: Rewards_Panel_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: gemText
+      value: 
+      objectReference: {fileID: 566970890}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 1038632000}
+    - target: {fileID: 8538631411133937504, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: metalText
+      value: 
+      objectReference: {fileID: 394088157}
+    - target: {fileID: 9070546073410746031, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
