@@ -11,6 +11,8 @@ public class RewardSetter : MonoBehaviour
     
     // Max 7 elements
     [SerializeField] private RewardPanel[] rewardPanels;
+    
+    [SerializeField] private GameObject noInternetPanel;
 
     [SerializeField] private Sprite metalIcon;
     [SerializeField] private Sprite coinIcon;
@@ -23,34 +25,44 @@ public class RewardSetter : MonoBehaviour
 
     private void OnEnable()
     {
-        SetRewardPanels();
+        //SetRewardPanels(false);
     }
 
-    public void SetRewardPanels()
+    public void SetRewardPanels(bool isNetworkAvailable)
     {
-        var rewards = rewardDatabase.rewards;
-        Sprite icon = null;
-        for (var i = 0; i < rewards.Length; i++)
+        if (!isNetworkAvailable)
         {
-            if (rewards[i].type == RewardType.Metal)
-            {
-                icon = metalIcon;
-            }
-            else if (rewards[i].type == RewardType.Coin)
-            {
-                icon = coinIcon;
-            }
-            else if (rewards[i].type == RewardType.Gem)
-            {
-                icon = gemIcon;
-            }
-            rewardPanels[i].SetRewardPanel(
-                icon, 
-                rewards[i].amount, 
-                rewards[i].isLocked, 
-                rewards[i].isClaimed,
-                i
-                );
+            Debug.Log("They called me too.");
+            noInternetPanel.SetActive(true);
         }
+        else
+        {
+            noInternetPanel.SetActive(false);
+            var rewards = rewardDatabase.rewards;
+            Sprite icon = null;
+            for (var i = 0; i < rewards.Length; i++)
+            {
+                if (rewards[i].type == RewardType.Metal)
+                {
+                    icon = metalIcon;
+                }
+                else if (rewards[i].type == RewardType.Coin)
+                {
+                    icon = coinIcon;
+                }
+                else if (rewards[i].type == RewardType.Gem)
+                {
+                    icon = gemIcon;
+                }
+                rewardPanels[i].SetRewardPanel(
+                    icon, 
+                    rewards[i].amount, 
+                    rewards[i].isLocked, 
+                    rewards[i].isClaimed,
+                    i
+                );
+            }
+        }
+        
     }
 }

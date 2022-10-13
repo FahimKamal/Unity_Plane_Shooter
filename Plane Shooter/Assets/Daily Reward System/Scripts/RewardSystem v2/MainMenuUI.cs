@@ -8,7 +8,9 @@ using UnityEngine.UI;
 
 public class MainMenuUI : MonoBehaviour
 {
+    [SerializeField] private WorldTimeAPI worldTimeAPI;
     [SerializeField] private float nextRewardDelayTime = 20f;
+    [SerializeField] private bool isNetworkAvailable = false;
     
     [Header("UI elements")] [Space]
     [SerializeField] private TextMeshProUGUI metalText;
@@ -45,34 +47,45 @@ public class MainMenuUI : MonoBehaviour
 
     private void CheckReward()
     {
-        if (gameData.lastLoginDate is "" or "0")
+        if (worldTimeAPI.isTimeLoaded)
         {
-            gameData.lastLoginDate = DateTime.Now.ToString();
-            FirstLogin();
-            rewardNotification.SetActive(true);
-            return;
-        }
-        
-        var currentDate = DateTime.Now;
-        var lastLoginDate = DateTime.Parse(gameData.lastLoginDate);
-        var totalSeconds = (currentDate - lastLoginDate).TotalSeconds;
-
-        if (totalSeconds >= nextRewardDelayTime)
-        {
-            var rewards = rewardDatabase.rewards;
-            for (int i = 0; i < rewards.Length; i++)
+            Debug.Log("Check check");
+            var currentDate = worldTimeAPI.GetCurrentDateTime(out isNetworkAvailable);
+            if (gameData.lastLoginDate is "" or "0")
             {
-                if (i == gameData.loginCount)
+                gameData.lastLoginDate = currentDate.ToString();
+                FirstLogin();
+                rewardNotification.SetActive(true);
+                return;
+            }
+
+            var lastLoginDate = DateTime.Parse(gameData.lastLoginDate);
+
+            var totalSeconds = (currentDate - lastLoginDate).TotalSeconds;
+
+            if (totalSeconds >= nextRewardDelayTime)
+            {
+                var rewards = rewardDatabase.rewards;
+                for (var i = 0; i < rewards.Length; i++)
                 {
-                    rewards[i].isLocked = false;
-                    rewardNotification.SetActive(true);
-                    rewardSetter.SetRewardPanels();
-                    break;
+                    if (i == gameData.loginCount)
+                    {
+                        rewards[i].isLocked = false;
+                        rewardNotification.SetActive(true);
+                        rewardSetter.SetRewardPanels(true);
+                        break;
+                    }
                 }
             }
         }
+        else
+        {
+            Debug.Log("Some one is calling me");
+            rewardSetter.SetRewardPanels(false);
+        }
+
+        
     }
-    
     private void FirstLogin()
     {
         var rewards = rewardDatabase.rewards;
@@ -82,7 +95,7 @@ public class MainMenuUI : MonoBehaviour
             rewards[i].isClaimed = false;
         }
         rewards[0].isLocked = false;
-        rewardSetter.SetRewardPanels();
+        rewardSetter.SetRewardPanels(true);
     }
     
     private void OpenRewardPanel()

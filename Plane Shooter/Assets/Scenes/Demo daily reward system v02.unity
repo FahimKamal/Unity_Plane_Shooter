@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 27594545}
   - component: {fileID: 27594544}
   - component: {fileID: 27594543}
+  - component: {fileID: 27594546}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -207,6 +208,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &27594546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27594542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75379154b5654a84190328808fa61ae9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTimeLoaded: 0
 --- !u!1 &187348643
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,7 +621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1075,7 +1089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1210,7 +1224,6 @@ RectTransform:
   - {fileID: 1661840295}
   - {fileID: 972911727}
   - {fileID: 281426034}
-  - {fileID: 1506314585}
   - {fileID: 6036829889434060138}
   - {fileID: 1856679265}
   - {fileID: 2113194392}
@@ -1218,6 +1231,7 @@ RectTransform:
   - {fileID: 2046140726}
   - {fileID: 1102728960}
   - {fileID: 336724719}
+  - {fileID: 1506314585}
   m_Father: {fileID: 262791591}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1286,6 +1300,7 @@ MonoBehaviour:
   - {fileID: 2046140727}
   - {fileID: 1102728961}
   - {fileID: 1916237965}
+  noInternetPanel: {fileID: 1506314584}
   metalIcon: {fileID: 21300022, guid: 90a32486084ff5b448a426d6df901774, type: 3}
   coinIcon: {fileID: 21300020, guid: 90a32486084ff5b448a426d6df901774, type: 3}
   gemIcon: {fileID: 21300018, guid: 90a32486084ff5b448a426d6df901774, type: 3}
@@ -1930,7 +1945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1100942059
 Transform:
   m_ObjectHideFlags: 0
@@ -1965,7 +1980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2340,7 +2355,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3afdd9b8fc5ab2449092b20954359c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  worldTimeAPI: {fileID: 27594546}
   nextRewardDelayTime: 5
+  isNetworkAvailable: 0
   metalText: {fileID: 394088157}
   coinText: {fileID: 1038632000}
   gemText: {fileID: 566970890}
@@ -2368,7 +2385,7 @@ GameObject:
   - component: {fileID: 1506314587}
   - component: {fileID: 1506314586}
   m_Layer: 5
-  m_Name: NoMoreRewards_Panel
+  m_Name: Network_notAvailable_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2388,7 +2405,7 @@ RectTransform:
   m_Children:
   - {fileID: 2011180721}
   m_Father: {fileID: 772620711}
-  m_RootOrder: 3
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2858,7 +2875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3265,9 +3282,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'No More Rewards
+  m_text: 'Not Connected to
 
-    for today'
+    Internet'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 69cc75a96d51c124480ff6ef2cf8ec71, type: 2}
   m_sharedMaterial: {fileID: 1953902542327525156, guid: 69cc75a96d51c124480ff6ef2cf8ec71, type: 2}
@@ -3361,7 +3378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3490,7 +3507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3619,7 +3636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3588613971315092751, guid: a607972c90345b24d8a6f57bcc76f633, type: 3}
       propertyPath: m_AnchorMax.x
