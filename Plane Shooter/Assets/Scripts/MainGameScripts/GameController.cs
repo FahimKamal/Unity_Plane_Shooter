@@ -1,22 +1,26 @@
+using System.Collections;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] [CanBeNull] private GameObject pauseMenu;
-    [SerializeField] [CanBeNull] private GameObject gameOverMenu;
-    [SerializeField] [CanBeNull] private GameObject levelCompleteMenu;
-    [SerializeField] [CanBeNull] private GameObject pauseButton;
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject gameOverMenu;
+    [SerializeField] private GameObject levelCompleteMenu;
+    [SerializeField] private GameObject endText;
+    [SerializeField] private GameObject pauseButton;
     
     // Start is called before the first frame update
     private void Start()
     {
-        if (pauseMenu != null) pauseMenu.SetActive(false);
-        if (pauseButton != null) pauseButton.SetActive(true);
+        Time.timeScale = 1;
+        pauseMenu.SetActive(false);
+        pauseButton.SetActive(true);
         
-        if (gameOverMenu != null) gameOverMenu.SetActive(false);
-        if (levelCompleteMenu != null) levelCompleteMenu.SetActive(false);
+        gameOverMenu.SetActive(false);
+        endText.SetActive(false);
+        levelCompleteMenu.SetActive(false);
 
     }
     
@@ -26,8 +30,8 @@ public class GameController : MonoBehaviour
     }
     public void GameOver()
     {
-        if (gameOverMenu != null) gameOverMenu.SetActive(true);
-        if (pauseButton != null) pauseButton.SetActive(false);
+        gameOverMenu.SetActive(true);
+        pauseButton.SetActive(false);
     }
     
     public void TryAgain()
@@ -35,10 +39,22 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     
+    public IEnumerator LevelComplete()
+    {
+        yield return new WaitForSeconds(2f);
+        endText.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        levelCompleteMenu.SetActive(true);
+        Time.timeScale = 0f;
+        pauseButton.SetActive(false);
+    }
+    
     public void NextLevel()
     {
-        
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (SceneManager.GetActiveScene().buildIndex != SceneManager.sceneCountInBuildSettings - 1)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
     
     public void QuitGame()
@@ -48,15 +64,15 @@ public class GameController : MonoBehaviour
     
     public void PauseGame()
     {
-        if (pauseMenu != null) pauseMenu.SetActive(true);
-        if (pauseButton != null) pauseButton.SetActive(false);
+        pauseMenu.SetActive(true);
+        pauseButton.SetActive(false);
         Time.timeScale = 0;
     }
     
     public void ResumeGame()
     {
-        if (pauseMenu != null) pauseMenu.SetActive(false);
-        if (pauseButton != null) pauseButton.SetActive(true);
+        pauseMenu.SetActive(false);
+        pauseButton.SetActive(true);
         Time.timeScale = 1;
     }
     

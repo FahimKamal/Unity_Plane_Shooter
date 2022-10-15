@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
@@ -96,13 +97,31 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        #region Input for PC
+        // BUT NOW THEY WILL BE COMMENT OUTED.
         var horizontalInput = Input.GetAxis("Horizontal") * Time.deltaTime * movementSpeed;
         var verticalInput = Input.GetAxis("Vertical") * Time.deltaTime * movementSpeed;
         
-        Vector2 planePosition = transform.position;
+        var planePosition = transform.position;
         var newXPosition = Mathf.Clamp(planePosition.x + horizontalInput, _minX, _maxX);
         var newYPosition = Mathf.Clamp(planePosition.y + verticalInput, _minY, _maxY);
         
         transform.position = new Vector2(newXPosition, newYPosition);
+
+        #endregion
+        
+        #region INPUT FOR MOBILE
+
+        if (Input.GetMouseButton(0))
+        {
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            planePosition = transform.position;
+            newXPosition = Mathf.Clamp(mousePosition.x, _minX, _maxX);
+            newYPosition = Mathf.Clamp(mousePosition.y, _minY, _maxY);
+            transform.position = Vector2.Lerp(planePosition, new Vector2(newXPosition, newYPosition), movementSpeed * Time.deltaTime);
+        }
+
+        #endregion
+        
     }
 }

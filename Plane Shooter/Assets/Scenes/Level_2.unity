@@ -2741,7 +2741,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1462777298
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3221,10 +3221,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
+  - {fileID: 841822715372011240, guid: 6fa8c27301e90a94eba3f249cfc1444b, type: 3}
   - {fileID: 8053812218944397929, guid: 84b8bbff4801254468a45afb2145688f, type: 3}
   gameController: {fileID: 701842434}
   respawnTime: 2
-  enemySpawnCount: 5
+  enemySpawnCount: 10
 --- !u!4 &1646016852
 Transform:
   m_ObjectHideFlags: 0

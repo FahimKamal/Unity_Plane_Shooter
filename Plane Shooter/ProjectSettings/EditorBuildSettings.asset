@@ -5,13 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: b7630069ccbb5624ea017f9c31e020e8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Level_1.unity
     guid: 16dbcb323e6ff0c44aa0e3ab03164281
   - enabled: 1
+    path: Assets/Scenes/Level_2.unity
+    guid: cba59baa042cb274899f914cbf6b85f1
+  - enabled: 0
     path: Assets/Scenes/Demo daily reward system v02.unity
     guid: 744cd2d268bcac5489cf694fcabbf15d
   m_configObjects: {}
