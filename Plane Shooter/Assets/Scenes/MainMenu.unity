@@ -155,6 +155,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 0}
   gameOverMenu: {fileID: 0}
   levelCompleteMenu: {fileID: 0}
+  endText: {fileID: 0}
   pauseButton: {fileID: 0}
 --- !u!4 &102606706
 Transform:
@@ -942,9 +943,9 @@ Canvas:
   m_GameObject: {fileID: 1576466897}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 162168034}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 8.2
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
